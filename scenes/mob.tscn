@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://5s54lgpgdnfi"]
+
+[ext_resource type="Script" path="res://scripts/Mob.gd" id="1_45gs3"]
+[ext_resource type="Texture2D" uid="uid://dmhy73oxieus7" path="res://art/rock.png" id="2_xptjw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4y4r"]
+radius = 41.0
+height = 82.0
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_45gs3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_xptjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_n4y4r")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
