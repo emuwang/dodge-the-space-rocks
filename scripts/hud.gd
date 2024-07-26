@@ -27,6 +27,8 @@ func show_message(text):
 # Called to show game over message and reset title screen
 func show_game_over():
 	$Message.text = "game over"
+	$Message.show()
+	$MessageTimer.start()
 	await $MessageTimer.timeout
 	$Message.text = "dodge the space rocks"
 	$Message.show()

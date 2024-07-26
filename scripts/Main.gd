@@ -11,7 +11,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#$Music.pitch_scale += 0.0000015
 	$Music.pitch_scale += 0.000015
 
 # Called when player hits a rock
