@@ -4,7 +4,7 @@ A video game to keep this spinning rocket from crashing into evil space rocks.
 ## Instructions
 ### Installation
 Windows:
-Run by downloading "dodge the space rocks.exe" and "dodge the space rocks.pck".
+Download the "dodge the space rock" folder and run the "dodge the space rock.exe".
 ### Keyboard Controls
 Movement: WASD/Arrow Keys
 <br > Start: Enter/Space 
